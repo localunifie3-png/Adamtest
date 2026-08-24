@@ -1,0 +1,1535 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Space</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="style-premium4.css">
+</head>
+<body class="portal">
+<header class="portal-header">
+<button class="app-launcher" id="menu"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></button>
+<div class="header-logo"><strong></strong>
+<img class="HG-logo" src="HG.png" alt="Education ministry logo">
+<img class="ministry-logo" src="ministry-logo-transparent.png" alt="Education ministry logo">
+</div>
+<input class="search" id="search" placeholder="Search in Student Space">
+<div class="header-actions" >
+  <button class="icon-btn"><img src="images/icon/hed.png" alt="تلميذ" style="width:24px;height:24px;"></button>
+  <button class="icon-btn"><img src="images/icon/hed2.png" alt="تلميذ" style="width:30px;height:30px;"></button>
+  <button class="icon-btn"><img src="images/icon/hed3.png" alt="تلميذ" style="width:24px;height:24px;"></button>
+<div class="profile"><span id="profileName">Student</span><span class="avatar1" id="avatar">S</span></div></div>
+</header>
+<div class="portal-body">
+<aside class="sidebar" id="sidebar">
+<button class="nav-item active" data-view="home"><span><img src="images/icon/home.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>الرئيسية</h3></b></button>
+<button class="nav-item" data-view="courses"><span><img src="images/icon/fadai.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>فضائي للتعلم</h3></b></button>
+<button class="nav-item" data-view="grades"><span><img src="images/icon/tanafosse.svg" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>مسابقات وأنشطة مدرسية</h3></b></button>
+<button class="nav-item" data-view="documents"><span><img src="images/icon/sahafa.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>نادي الصحافة المدرسي</h3></b></button>
+<button class="nav-item" data-view="calendar"><span><img src="images/icon/inf.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>جناح المعلوميات</h3></b></button>
+<button class="nav-item" data-view="messages"><span><img src="images/icon/message.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>رسائلي</h3></b></button>
+<button class="nav-item" data-view="profile"><span><img src="images/icon/profile.png" alt="تلميذ" style="width:24px;height:24px;"></span><b><h3>ملفي الشخصي</h3></b></button>
+
+<button class="nav-item" id="complaintsBtn">
+  <span class="complaints-btn" >
+      
+      <img src="images/icon/service.png" alt="تلميذ" style="width:24px;height:24px;">
+  </span>
+  <b><h3>إيداع الشكايات</h3></b></button>
+
+
+<button class="nav-item logout" id="logout"><span>↪</span><b><h3>تسجيل الخروج</h3></b></button>
+
+
+</aside>
+
+
+<main class="content">
+<section class="view active" id="home">
+<h1 id="welcome"></h1>
+<p class="welcome">أهلاً بكم في منظومة مدرسية محلية متكاملة تجمع بين التعلم والمشاركة في المسابقات والأنشطة المدرسية.</p>
+<h2 class="welcome2">مساري السريع</h2>
+<div class="quick-grid">
+<article class="quick-card" data-open="courses"><div class="quick-image image-one"></div><div class="quick-icon">📚</div><h3>My courses</h3><p>Access your subjects and learning resources.</p></article>
+<article class="quick-card" data-open="grades"><div class="quick-image image-two"></div><div class="quick-icon">📊</div><h3>My grades</h3><p>Follow your results and academic progress.</p></article>
+<article class="quick-card" data-open="documents"><div class="quick-image image-three"></div><div class="quick-icon">📄</div><h3>Documents</h3><p>Find school documents and useful files.</p></article>
+<article class="quick-card" data-open="calendar"><div class="quick-image image-four"></div><div class="quick-icon">📅</div><h3>Calendar</h3><p>Keep track of exams and important dates.</p></article>
+</div>
+<h2>Learn and build</h2>
+<div class="learning" data-open="courses"><div class="learn-card"><em>STUDY</em><h3>Study resources</h3><p>Keep your revision material organized.</p></div>
+<div class="learn-card" data-open="courses"><em>PROGRESS</em><h3>Academic progress</h3><p>Review your results and goals.</p></div>
+<div class="learn-card" data-open="courses"><em>HELP</em><h3>Student help</h3><p>Find useful information from your school.</p></div></div>
+</section>
+
+<section class="view" id="courses">
+
+      <div class="learning-space">
+          <h1><img src="images/icon/hed3.png" alt="تلميذ" > فضائي للتعلّم <img src="images/icon/hed2.png" alt="تلميذ" ></h1>
+          <p>استكشف فضائي للتعلّم للوصول إلى المواد والدروس بسهولة.</p>
+      </div>
+      
+    <!-- اختيار المستوى -->
+    <div id="levels" class="levels-grid">
+
+        <button class="level-card" data-level="1ac">
+            <span class="level-number"><img src="images/icon/EX1.png" style="width:40px;height:40px;"></span>
+            <div>
+                <h3> امتحانات محلية</h3>
+                <p>الثالثة إعدادي  </p>
+            </div>
+            <span class="arrow">→</span>
+        </button>
+
+        <button class="level-card" data-level="2ac">
+            <span class="level-number"><img src="images/icon/EX2.png"  style="width:48px;height:48px;"></span>
+            <div>
+                <h3> امتحانات جهوية</h3>
+                <p>الثالثة إعدادي</p>
+            </div>
+            <span class="arrow">→</span>
+        </button>
+
+        <button class="level-card" data-level="3ac">
+            <span class="level-number"><img src="images/icon/EX3.png"  style="width:40px;height:40px;"></span>
+            <div>
+                <h3> امتحانات جهوية</h3>
+                <p>الأولى باكالوريا </p>
+            </div>
+            <span class="arrow">→</span>
+        </button>
+
+        <button class="level-card" data-level="tronc">
+            <span class="level-number"><img src="images/icon/EX4.png"  style="width:40px;height:40px;"></span>
+            <div>
+                <h3>امتحانات وطنية </h3>
+                <p>الثانية بكالوريا </p>
+            </div>
+            <span class="arrow">→</span>
+        </button>
+
+    </div>
+
+    <!-- المواد -->
+    <div id="subjectsSection" class="subjects-section hidden">
+
+        <div class="section-heading">
+            <button id="backToLevels" class="back-button">← رجوع</button>
+
+            <div>
+                <h2 id="selectedLevelTitle">Subjects</h2>
+                <p>Choose a subject to see its lessons.</p>
+            </div>
+        </div>
+
+        <div id="subjects" class="subjects-grid"></div>
+
+    </div>
+
+    <!-- الدروس -->
+    <div id="lessonsSection" class="lessons-section hidden">
+
+        <div class="section-heading">
+
+            <button id="backToSubjects" class="back-button">
+                ← Subjects
+            </button>
+
+            <div>
+                <h2 id="selectedSubjectTitle">Lessons</h2>
+                <p id="selectedSubjectDescription"></p>
+            </div>
+
+        </div>
+
+        <div id="lessons" class="lessons-list"></div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="view" id="documents">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>نادي الصحافة المدرسي</title><link rel="stylesheet" 
+href="style3.css"></head><body>
+<header class="topba">
+  <div class="brand"><div class="brand-mark">📰</div><div><b>فضاء المؤسسة</b><span>نادي الصحافة</span></div></div><div class="top-actions"></div>
+</header>
+<main>
+<section class="hero"><div class="hero-content"><span class="eyebrow">STUDENT MEDIA • CLUB</span><h1>نادي الصحافة المدرسي</h1><p>مساحة لاكتشاف أخبار المؤسسة، توثيق اللحظات، وتطوير مهارات الكتابة والتصوير والحوار.</p><div class="hero-actions"><a class="primary-btn" href="#album">استكشف الألبوم</a><a class="secondary-btn" href="#activities">أنشطة النادي</a></div></div><div class="hero-badge"><span>PRESS</span><strong>01</strong><small>إصدار النادي</small></div></section>
+<section class="section" id="album"><div class="section-title"><div><span class="eyebrow">PHOTO ALBUM</span><h2>أبرز اللحظات</h2><p>استعمل الأسهم أو النقاط لتصفح الصور.</p></div><b class="counter" id="slideCounter">01 / 04</b></div>
+<div class="album"><div class="slides">
+<article class="slide active"><img src="images/press/moment-1.png" alt="لحظة من النادي"><div class="slide-caption"><span>01</span><div><h3>بداية موسم صحفي جديد</h3><p>لقاء أعضاء النادي وتوزيع المهام.</p></div></div></article>
+<article class="slide"><img src="images/press/moment-2.png" alt="ورشة صحفية"><div class="slide-caption"><span>02</span><div><h3>ورشة الكتابة الصحفية</h3><p>التدرب على صياغة الخبر.</p></div></div></article>
+<article class="slide"><img src="images/press/moment-3.png" alt="تغطية نشاط"><div class="slide-caption"><span>03</span><div><h3>تغطية نشاط مدرسي</h3><p>التقاط الصور وإجراء مقابلات.</p></div></div></article>
+<article class="slide"><img src="images/press/moment-4.png" alt="اجتماع الفريق"><div class="slide-caption"><span>04</span><div><h3>اجتماع هيئة التحرير</h3><p>اختيار مواضيع العدد القادم.</p></div></div></article>
+</div><button class="album-arrow prev" id="prevSlide">‹</button><button class="album-arrow next" id="nextSlide">›</button><div class="dots" id="dots"></div></div></section>
+<section class="section" id="activities"><div class="section-title"><div><span class="eyebrow">CLUB TOOLS</span><h2>ماذا يقدم النادي؟</h2></div></div><div class="feature-grid">
+<article class="feature-card"><span>✍️</span><h3>الكتابة الصحفية</h3><p>تعلم كتابة الخبر والتقرير والحوار.</p></article>
+<article class="feature-card"><span>📷</span><h3>التصوير والتوثيق</h3><p>توثيق الأنشطة واختيار الصور المناسبة.</p></article>
+<article class="feature-card"><span>🎙️</span><h3>المقابلات</h3><p>تحضير الأسئلة وإجراء حوارات محترمة.</p></article>
+<article class="feature-card"><span>🧠</span><h3>التحقق من المعلومات</h3><p>تعلم التمييز بين الخبر الموثوق والمعلومة غير المؤكدة.</p></article>
+</div></section>
+<section class="section split-section"><div class="info-panel"><span class="eyebrow">EDITORIAL BOARD</span><h2>فريق النادي</h2><p>أضف أسماء الأعضاء ومهامهم: رئيس التحرير، المصور، الكاتب والمراسل.</p><div class="roles"><span>رئيس التحرير</span><span>مراسل</span><span>مصور</span><span>كاتب</span></div></div><div class="info-panel accent"><span class="eyebrow">NEXT EDITION</span><h2>العدد القادم</h2><p>أضف هنا موضوع العدد أو رابط مجلة النادي الرقمية.</p><a class="primary-btn" href="#" onclick="alert('ضع رابط المجلة هنا');return false">فتح المجلة</a></div></section>
+</main>
+<div class="help-modal" id="helpModal"><div class="modal-card"><button class="close-btn" id="closeHelp">×</button><span class="eyebrow">HELP CENTER</span><h2>المساعدة</h2><p>استعمل الأسهم لتصفح الألبوم، وزر القمر لتفعيل الوضع الليلي. استبدل صور SVG التجريبية بصور أنشطة المؤسسة.</p></div></div>
+<script src="script2.js"></script></body></html>
+
+</section>
+
+<section class="view" id="grades">
+  <!-- ================================
+     SCHOOL COMPETITIONS
+================================ -->
+
+<section class="competitions-section">
+
+    <div class="competitions-header">
+        <div>
+            <span class="section-label">أنشطة التلاميذ</span>
+            <h2>مسابقاتي المدرسية </h2>
+            <p>اكتشف المسابقات وشارك في تحديات مثيرة.🎭</p>
+        </div>
+
+        <div class="competition-trophy">🏆</div>
+    </div>
+
+
+    <div class="competitions-grid">
+
+        <!-- Competition 1 -->
+        <a
+            href="https://forms.cloud.microsoft/r/m17FpWr3DT?origin=lprLink"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Mathematics Competition"
+                >
+
+                <span class="competition-badge">
+                    جديد
+                </span>
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    تحدي الأفق
+                </span>
+
+                <h3>
+                    تحدي الأفق
+                </h3>
+
+                <p>
+                    انطلق نحو الأفق، واختبر مهاراتك في حل المسائل الممتعة والمنافسة مع أصدقائك!
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Competition 2 -->
+        <a
+            href="https://example.com"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Informatics Competition"
+                >
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    INFORMATICS
+                </span>
+
+                <h3>
+                    Coding Challenge
+                </h3>
+
+                <p>
+                    Challenge yourself with programming
+                    and digital skills.
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Competition 3 -->
+        <a
+            href="https://example.com"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Science Competition"
+                >
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    SCIENCE
+                </span>
+
+                <h3>
+                    Science Competition
+                </h3>
+
+                <p>
+                    Explore science and discover
+                    new challenges.
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="competitions-section">
+
+    <div class="competitions-header">
+        <div>
+            <h2>لأشارك</h2>
+            <p>اكتشف المسابقات وشارك في تحديات مثيرة.🎭</p>
+        </div>
+
+        <div class="competition-trophy">🏆</div>
+    </div>
+
+
+    <div class="competitions-grid">
+
+        <!-- Competition 1 -->
+        <a
+            href="https://forms.cloud.microsoft/r/m17FpWr3DT?origin=lprLink"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Mathematics Competition"
+                >
+
+                <span class="competition-badge">
+                    جديد
+                </span>
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    تحدي الأفق
+                </span>
+
+                <h3>
+                    تحدي الأفق
+                </h3>
+
+                <p>
+                    انطلق نحو الأفق، واختبر مهاراتك في حل المسائل الممتعة والمنافسة مع أصدقائك!
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Competition 2 -->
+        <a
+            href="https://example.com"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Informatics Competition"
+                >
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    INFORMATICS
+                </span>
+
+                <h3>
+                    Coding Challenge
+                </h3>
+
+                <p>
+                    Challenge yourself with programming
+                    and digital skills.
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Competition 3 -->
+        <a
+            href="https://example.com"
+            target="_blank"
+            class="competition-card"
+        >
+
+            <div class="competition-image">
+                <img
+                    src="background.png"
+                    alt="Science Competition"
+                >
+            </div>
+
+            <div class="competition-content">
+
+                <span class="competition-category">
+                    SCIENCE
+                </span>
+
+                <h3>
+                    Science Competition
+                </h3>
+
+                <p>
+                    Explore science and discover
+                    new challenges.
+                </p>
+
+                <span class="competition-link">
+                    هيا بنا أصدقائي
+                    <strong>←</strong>
+                </span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+</section>
+
+
+
+
+<section class="view" id="calendar">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>المعلوميات</title>
+
+    
+</head>
+
+<body class="tech-page">
+
+
+
+
+<main class="tech-main">
+
+    <section class="tech-hero">
+
+        <div class="tech-bg"></div>
+
+        <div class="tech-overlay"></div>
+
+        <div class="tech-content">
+
+            <span class="tech-small-title">
+                DIGITAL WORLD
+            </span>
+
+            <h1>
+                المعلوميات
+            </h1>
+
+            <p>
+                اكتشف أدواتك الرقمية
+            </p>
+
+        </div>
+
+
+        <div class="tech-cards">
+
+
+            <!-- SCRATCH -->
+
+            <a
+                href="https://scratch.mit.edu/"
+                target="_blank"
+                class="tech-card scratch"
+            >
+
+                <div class="tech-card-logo">
+                    🐱
+                </div>
+
+                <div>
+                    <strong>Scratch</strong>
+                    <span>برمجة إبداعية</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+            <!-- MAKECODE -->
+
+            <a
+                href="https://makecode.microbit.org/"
+                target="_blank"
+                class="tech-card makecode"
+            >
+
+                <div class="tech-card-logo">
+                    🧩
+                </div>
+
+                <div>
+                    <strong>MakeCode</strong>
+                    <span>تعلم البرمجة</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+            <!-- CANVA -->
+
+            <a
+                href="https://www.canva.com/"
+                target="_blank"
+                class="tech-card canva"
+            >
+
+                <div class="tech-card-logo">
+                    🎨
+                </div>
+
+                <div>
+                    <strong>Canva</strong>
+                    <span>التصميم الرقمي</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+            <!-- PYTHON -->
+
+            <a
+                href="https://www.python.org/"
+                target="_blank"
+                class="tech-card python"
+            >
+
+                <div class="tech-card-logo">
+                    🐍
+                </div>
+
+                <div>
+                    <strong>Python</strong>
+                    <span>Programming</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+            <!-- GITHUB -->
+
+            <a
+                href="https://github.com/"
+                target="_blank"
+                class="tech-card github"
+            >
+
+                <div class="tech-card-logo">
+                    ◉
+                </div>
+
+                <div>
+                    <strong>GitHub</strong>
+                    <span>مشاريع وبرمجة</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+            <!-- VS CODE -->
+
+            <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                class="tech-card vscode"
+            >
+
+                <div class="tech-card-logo">
+                    ◆
+                </div>
+
+                <div>
+                    <strong>Visual Studio Code</strong>
+                    <span>محرر الأكواد</span>
+                </div>
+
+                <b>↗</b>
+
+            </a>
+
+
+        </div>
+    <div class="tech-content">
+      <h1>Beta Inf</h1>
+    </div>
+    <div class="cards">
+    <!-- البطاقة الأولى -->
+    <div class="info-cards">
+      <a href="background.png" target="_blank">
+        <img src="background.png" alt="My courses">
+        
+      </a>
+      <h3>المشاركة</h3>
+      <p>Access your subjects and learning resources.</p>
+    </div>
+
+    <!-- البطاقة الثانية -->
+    <div class="info-cards">
+      <a href="grades.pdf" target="_blank">
+        <img src="background2.png" alt="My grades">
+        <h3>My grades</h3>
+        <p>Follow your results and academic progress.</p>
+      </a>
+    </div>
+
+
+    </section>
+
+</main>
+
+
+<script src="scripta.js"></script>
+
+</body>
+</html>
+
+
+ 
+</section>
+
+  
+
+</section>
+
+
+<section class="view" id="messages"><h1>علبة الرسائل</h1><div class="info-card"><h3>صندوق الوارد</h3><img src="images/icon/adams.gif"><p>ستظهر الرسائل الجديدة هنا.</p></div></section>
+<section class="view" id="profile">
+
+<section class="view active" id="profile">
+  <div class="profile-wrapper">
+
+
+    <div class="profile-card">
+      <div class="profile-badge">
+        <img src="ministry-logo-transparent.png" alt="شعار الوزارة">
+      </div>
+      <!-- الدائرة مع شعار المؤسسة -->
+      <div class="profile-avatar">
+        <img src="HG.png" alt="شعار المؤسسة">
+      </div>
+
+      <!-- معلومات الحساب -->
+      <div class="profile-info">
+        
+        <h1 id="fullAccount"></h1>
+        <p>هذا حساب مؤقت لايتم حفظه أو العمل به.</p>
+      </div>
+
+      <!-- شعار الوزارة -->
+      
+    </div>
+  </div>
+</section>
+
+  
+
+
+  
+  
+  <h1>ملفي الشخصي</h1><div class="info-card"><img src="ministry-logo.png" class="portal-logo"><h3 id="fullName">Student</h3><p id="fullAccount">student@taalim.HG</p></div></section>
+</main></div>
+
+<div class="logout-overlay" id="logoutOverlay">
+
+    <div class="logout-modal">
+
+        <div class="logout-icon">↪</div>
+
+        <h2>هل تريد تسجيل الخروج؟</h2>
+
+        <p>
+            هل أنت متأكد من رغبتك في تسجيل الخروج من حسابك ؟
+        </p>
+
+        <div class="logout-buttons">
+
+            <button id="cancelLogout">
+                يلغي
+            </button>
+
+            <button id="confirmLogout">
+                تسجيل الخروج
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<section class="sidebar-bottom" id="complaintsBtn">
+    <link rel="stylesheet" href="style8.css">
+
+  <!-- الطبقة الضبابية -->
+  <div class="blur-overlay" id="blurOverlay"></div>
+
+  <!-- لوحة الشكايات -->
+  <aside
+    class="complaints-panel"
+    id="complaintsPanel"
+    aria-hidden="true">
+
+    <div class="panel-header">
+      <div>
+        <span class="panel-label">الخدمات الإلكترونية</span>
+        <h2>إيداع الشكايات</h2>
+      </div>
+
+      <button class="close-btn" id="closeBtn" aria-label="إغلاق">×</button>
+    </div>
+
+    <!-- نموذج مراجعة النتيجة -->
+    <section class="complaint-section">
+
+      <form id="complaintForm">
+
+
+    <!-- الخدمات  -->
+
+      <div class="service-links">
+
+        <!-- غيّر href إلى الصفحة التي تريدها -->
+        <a href="https://forms.cloud.microsoft/r/rih86yUybL?origin=lprLink" class="service-link">
+          <span class="mini-icon blue"><img src="images/icon/refreshT.gif" style="width:24px;height:24px;"></span>
+          <span>
+            <strong><h2>طلب مراجعت نتائجي الدراسية </h2></strong>
+          </span>
+          <b>‹</b>
+        </a>
+        <a href="https://forms.cloud.microsoft/r/bXBZbWwLt5?origin=lprLink" class="service-link">
+          <span class="mini-icon blue"><img src="images/icon/serviceAD.gif" alt="تلميذ" style="width:24px;height:24px;"></span>
+          <span>
+            <strong><h2>طلب إضافة خدمات</h2></strong>
+          </span>
+          <b>‹</b>
+        </a>
+
+        <a href="adamloumainiservice.html" class="service-link">
+          <span class="mini-icon green"><img src="images/icon/admin.png" alt="تلميذ" style="width:24px;height:24px;"></span>
+          <span>
+            <strong><h2>فريق الدعم </h2></strong>
+          </span>
+          <b>‹</b>
+        </a>
+
+      </div>
+    </section>
+
+  </aside>
+
+
+
+</section>
+
+
+
+<script>
+const side=document.getElementById("sidebar");
+document.getElementById("menu").onclick=()=>side.classList.toggle("expanded");
+const name=localStorage.getItem("studentName")||"Student", account=localStorage.getItem("studentAccount")||"student@taalim.HG";
+document.getElementById("profileName").textContent=name;document.getElementById("avatar").textContent=name[0].toUpperCase();
+document.getElementById("fullName").textContent=name;document.getElementById("fullAccount").textContent=account;
+function openView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll("[data-view]").forEach(n=>n.classList.toggle("active",n.dataset.view===id));}
+document.querySelectorAll("[data-view]").forEach(n=>n.onclick=()=>openView(n.dataset.view));
+document.querySelectorAll("[data-open]").forEach(n=>n.onclick=()=>openView(n.dataset.open));
+
+document.getElementById("profileName").textContent = name;
+document.getElementById("fullAccount").textContent = name;
+
+
+// عرض الترحيب باسم التلميذ في الصفحة
+const welcome = document.getElementById("welcome");
+if (welcome) {
+welcome.innerHTML = 'مرحبًا ' + name + 
+  ' <img src="images/icon/HI.png" alt="تلميذ" >';
+}
+
+
+const logout = document.getElementById("logout");
+
+const logoutOverlay =
+    document.getElementById("logoutOverlay");
+
+const cancelLogout =
+    document.getElementById("cancelLogout");
+
+const confirmLogout =
+    document.getElementById("confirmLogout");
+
+
+// عند الضغط على Sign out
+logout.addEventListener("click", function () {
+
+    logoutOverlay.classList.add("show");
+
+});
+
+
+// عند الضغط على Cancel
+cancelLogout.addEventListener("click", function () {
+
+    logoutOverlay.classList.remove("show");
+
+});
+
+
+// عند تأكيد تسجيل الخروج
+confirmLogout.addEventListener("click", function () {
+
+    localStorage.removeItem("studentName");
+    localStorage.removeItem("studentAccount");
+
+    window.location.href = "index.html";
+
+});
+
+document.getElementById("search").oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll(".quick-card").forEach(c=>c.style.display=!q||c.textContent.toLowerCase().includes(q)?"":"none")};
+</script>
+
+<script>
+
+const studentName =
+    localStorage.getItem("studentName") || "Student";
+
+const studentAccount =
+    localStorage.getItem("studentAccount") ||
+    "student@taalim.HG";
+
+// عرض الحساب في الأعلى
+document.getElementById("profileName").textContent =
+    studentAccount;
+
+// وضع أول حرف في دائرة الحساب
+document.getElementById("avatar").textContent =
+    studentName.charAt(0).toUpperCase();
+
+
+/* ================================
+   STUDENT LEARNING SPACE
+================================ */
+
+const curriculum = {
+
+    "1ac": {
+        name: "1st Year Middle School",
+
+        subjects: {
+            math: {
+                name: "الرياضيات",
+                icon: "∑",
+                lessons: [
+                    "adam",
+                    "Fractions",
+                    "Geometry",
+                    "Proportionality"
+                ]
+            },
+
+            svt: {
+                name: "علوم الحياة والأرض",
+                icon: "🌱",
+                lessons: [
+                    "The living world",
+                    "Nutrition",
+                    "The human body"
+                ]
+            },
+
+            physics: {
+                name: "الفيزياء والكيمياء",
+                icon: "⚗",
+                lessons: [
+                    "Matter",
+                    "Measurements",
+                    "Electricity"
+                ]
+            },
+
+            arabic: {
+                name: "اللغة العربية",
+                icon: "ع",
+                lessons: [
+                    "Reading",
+                    "Grammar",
+                    "Expression",
+                    "Literature"
+                ]
+            },
+
+            french: {
+                name: "اللغة الفرنسية",
+                icon: "FR",
+                lessons: [
+                    "Reading",
+                    "Grammar",
+                    "Vocabulary",
+                    "Expression"
+                ]
+            },
+
+            english: {
+                name: "التربية الإسلامية",
+                icon: "☪",
+                lessons: [
+                    "Vocabulary",
+                    "Grammar",
+                    "Reading"
+                ]
+            },
+
+            social: {
+                name: "الاجتماعيات",
+                icon: "🌍",
+                lessons: [
+                    "History",
+                    "Geography",
+                    "Civic Education"
+                ]
+            }
+        }
+    },
+
+
+    "2ac": {
+        name: "2nd Year Middle School",
+
+        subjects: {
+
+            math: {
+                name: "الرياضيات",
+                icon: "∑",
+                lessons: [
+                    "Algebra",
+                    "Geometry",
+                    "Proportionality",
+                    "Statistics"
+                ]
+            },
+
+            svt: {
+                name: "علوم الحياة والأرض",
+                icon: "🌱",
+                lessons: [
+                    "Human nutrition",
+                    "Respiration",
+                    "Earth sciences"
+                ]
+            },
+
+            physics: {
+                name: "الفيزياء والكيمياء",
+                icon: "⚗",
+                lessons: [
+                    "Electricity",
+                    "Matter",
+                    "Chemical transformations"
+                ]
+            },
+
+            arabic: {
+                name: "اللغة العربية",
+                icon: "ع",
+                lessons: [
+                    "Grammar",
+                    "Reading",
+                    "Expression",
+                    "Literature"
+                ]
+            },
+
+            french: {
+                name: "اللغة الفرنسية",
+                icon: "FR",
+                lessons: [
+                    "Grammar",
+                    "Reading",
+                    "Communication"
+                ]
+            },
+
+            english: {
+                name: "التربية الإسلامية",
+                icon: "☪",
+                lessons: [
+                    "Grammar",
+                    "Vocabulary",
+                    "Communication"
+                ]
+            },
+
+            social: {
+                name: "الاجتماعيات",
+                icon: "🌍",
+                lessons: [
+                    "History",
+                    "Geography",
+                    "Civic Education"
+                ]
+            }
+        }
+    },
+
+
+    "3ac": {
+        name: "3rd Year Middle School",
+
+        subjects: {
+
+            math: {
+                name: "الرياضيات",
+                icon: "∑",
+                lessons: [
+                    "Algebra",
+                    "Functions",
+                    "Geometry",
+                    "Statistics"
+                ]
+            },
+
+            svt: {
+                name: "علوم الحياة والأرض",
+                icon: "🌱",
+                lessons: [
+                    "Genetics",
+                    "Human body",
+                    "Earth sciences"
+                ]
+            },
+
+            physics: {
+                name: "الفيزياء والكيمياء",
+                icon: "⚗",
+                lessons: [
+                    "Electric circuits",
+                    "Mechanics",
+                    "Chemical reactions"
+                ]
+            },
+
+            arabic: {
+                name: "اللغة العربية",
+                icon: "ع",
+                lessons: [
+                    "Grammar",
+                    "Literature",
+                    "Expression",
+                    "Reading"
+                ]
+            },
+
+            french: {
+                name: "اللغة الفرنسية",
+                icon: "FR",
+                lessons: [
+                    "Grammar",
+                    "Literature",
+                    "Expression"
+                ]
+            },
+
+            english: {
+                name: "التربية الإسلامية",
+                icon: "☪",
+                lessons: [
+                    "Grammar",
+                    "Vocabulary",
+                    "Reading"
+                ]
+            },
+
+            social: {
+                name: "الاجتماعيات",
+                icon: "🌍",
+                lessons: [
+                    "History",
+                    "Geography",
+                    "Civic Education"
+                ]
+            }
+        }
+    },
+
+
+    "tronc": {
+        name: "Common Core",
+
+        subjects: {
+
+            math: {
+                name: "الرياضيات",
+                icon: "∑",
+                lessons: [
+                    "Algebra",
+                    "Functions",
+                    "Statistics",
+                    "Geometry"
+                ]
+            },
+
+            svt: {
+                name: "علوم الحياة والأرض",
+                icon: "🌱",
+                lessons: [
+                    "Cell biology",
+                    "Genetics",
+                    "Ecology"
+                ]
+            },
+
+            physics: {
+                name: "الفيزياء والكيمياء",
+                icon: "⚗",
+                lessons: [
+                    "Mechanics",
+                    "Electricity",
+                    "Chemical transformations"
+                ]
+            },
+
+            arabic: {
+                name: "اللغة العربية",
+                icon: "ع",
+                lessons: [
+                    "Arabic grammar",
+                    "Literary texts",
+                    "Expression",
+                    "Rhetoric"
+                ]
+            },
+
+            french: {
+                name: "اللغة الفرنسية",
+                icon: "FR",
+                lessons: [
+                    "Grammar",
+                    "Reading",
+                    "Literature",
+                    "Expression"
+                ]
+            },
+
+            english: {
+                name: "التربية الإسلامية",
+                icon: "☪",
+                lessons: [
+                    "Grammar",
+                    "Vocabulary",
+                    "Reading",
+                    "Communication"
+                ]
+            },
+
+            social: {
+                name: "الاجتماعيات",
+                icon: "🌍",
+                lessons: [
+                    "History",
+                    "Geography",
+                    "Civic education"
+                ]
+            }
+        }
+    }
+};
+
+
+/* ================================
+   ELEMENTS
+================================ */
+
+const levels = document.getElementById("levels");
+const subjectsSection =
+    document.getElementById("subjectsSection");
+
+const lessonsSection =
+    document.getElementById("lessonsSection");
+
+const subjects =
+    document.getElementById("subjects");
+
+
+const lessons =
+    document.getElementById("lessons");
+
+const selectedLevelTitle =
+    document.getElementById("selectedLevelTitle");
+
+const selectedSubjectTitle =
+    document.getElementById("selectedSubjectTitle");
+
+const selectedSubjectDescription =
+    document.getElementById("selectedSubjectDescription");
+
+
+let currentLevel = null;
+let currentSubject = null;
+
+
+/* ================================
+   SELECT LEVEL
+================================ */
+
+document.querySelectorAll(".level-card").forEach(card => {
+
+    card.addEventListener("click", function () {
+
+        currentLevel = this.dataset.level;
+
+        const level =
+            curriculum[currentLevel];
+
+        selectedLevelTitle.textContent =
+            level.name;
+
+        levels.classList.add("hidden");
+
+        subjectsSection.classList.remove("hidden");
+
+        displaySubjects(level.subjects);
+
+    });
+
+});
+
+
+/* ================================
+   DISPLAY SUBJECTS
+================================ */
+
+function displaySubjects(subjectData) {
+
+    subjects.innerHTML = "";
+
+    Object.entries(subjectData).forEach(
+        ([key, subject]) => {
+
+            const card =
+                document.createElement("button");
+
+            card.className = "subject-card";
+
+            card.innerHTML = `
+                <span class="subject-icon">
+                    ${subject.icon}
+                </span>
+
+                <span class="subject-info">
+                    <strong>${subject.name}</strong>
+                    <small>
+                        ${subject.lessons.length}
+                        lessons
+                    </small>
+                </span>
+
+                <span class="subject-arrow">
+                    →
+                </span>
+            `;
+
+            card.addEventListener("click", function () {
+
+                currentSubject = key;
+
+                displayLessons(subject);
+
+            });
+
+            subjects.appendChild(card);
+
+        }
+    );
+}
+
+
+/* ================================
+   DISPLAY LESSONS
+================================ */
+
+function displayLessons(subject) {
+
+    selectedSubjectTitle.textContent =
+        subject.name;
+
+    selectedSubjectDescription.textContent =
+        "Lessons for your selected level";
+
+    subjectsSection.classList.add("hidden");
+
+    lessonsSection.classList.remove("hidden");
+
+    lessons.innerHTML = "";
+
+    subject.lessons.forEach(
+        (lesson, index) => {
+
+            const item =
+                document.createElement("button");
+
+            item.className = "lesson-item";
+
+            item.innerHTML = `
+                <span class="lesson-number">
+                    ${String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span class="lesson-name">
+                    ${lesson}
+                </span>
+
+                <span class="lesson-arrow">
+                    →
+                </span>
+            `;
+
+            lessons.appendChild(item);
+
+        }
+    );
+}
+
+
+/* ================================
+   BACK BUTTONS
+================================ */
+
+document.getElementById("backToLevels")
+    .addEventListener("click", function () {
+
+        subjectsSection.classList.add("hidden");
+
+        levels.classList.remove("hidden");
+
+    });
+
+
+document.getElementById("backToSubjects")
+    .addEventListener("click", function () {
+
+        lessonsSection.classList.add("hidden");
+
+        subjectsSection.classList.remove("hidden");
+
+    });
+
+function openComplaints() {
+  document.getElementById("complaints-panel").classList.add("open");
+}
+
+function closeComplaints() {
+  document.getElementById("complaints-panel").classList.remove("open");
+}
+
+// لما تضغط على أي أيقونة أخرى، يغلق شريط الشكايات
+document.querySelectorAll(".sidebar-item").forEach(item => {
+  item.addEventListener("click", function() {
+    if (!this.classList.contains("complaints-btn")) {
+      closeComplaints();
+    }
+  });
+});
+
+function openComplaints() {
+  document.getElementById("complaints-panel").classList.add("open");
+  document.getElementById("blurOverlay").classList.add("active");
+}
+
+function closeComplaints() {
+  document.getElementById("complaints-panel").classList.remove("open");
+  document.getElementById("blurOverlay").classList.remove("active");
+}
+
+const body = document.body;
+
+const complaintsBtn = document.getElementById("complaintsBtn");
+const complaintsPanel = document.getElementById("complaintsPanel");
+const blurOverlay = document.getElementById("blurOverlay");
+const closeBtn = document.getElementById("closeBtn");
+const complaintForm = document.getElementById("complaintForm");
+const formMessage = document.getElementById("formMessage");
+
+let closeTimer = null;
+
+/* فتح اللوحة */
+function openComplaints() {
+  clearTimeout(closeTimer);
+
+  body.classList.add("panel-open");
+
+  complaintsBtn.setAttribute("aria-expanded", "true");
+  complaintsPanel.setAttribute("aria-hidden", "false");
+}
+
+/* إغلاق اللوحة */
+function closeComplaints() {
+  body.classList.remove("panel-open");
+
+  complaintsBtn.setAttribute("aria-expanded", "false");
+  complaintsPanel.setAttribute("aria-hidden", "true");
+}
+
+/* زر إيداع الشكايات */
+complaintsBtn.addEventListener("click", function (event) {
+  event.stopPropagation();
+
+  if (body.classList.contains("panel-open")) {
+    closeComplaints();
+  } else {
+    openComplaints();
+  }
+});
+
+/* زر X */
+closeBtn.addEventListener("click", closeComplaints);
+
+/* الضغط على الخلفية الضبابية */
+blurOverlay.addEventListener("click", closeComplaints);
+
+/*
+  عند مغادرة اللوحة بالماوس:
+  ننتظر قليلًا حتى لا تختفي بمجرد تحريك الماوس بالخطأ.
+*/
+complaintsPanel.addEventListener("mouseleave", function () {
+  closeTimer = setTimeout(closeComplaints, 450);
+});
+
+complaintsPanel.addEventListener("mouseenter", function () {
+  clearTimeout(closeTimer);
+});
+
+/* زر Escape */
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeComplaints();
+  }
+});
+
+/*
+  نموذج تجريبي:
+  حاليًا لا يرسل البيانات إلى خادم.
+  لاحقًا يمكنك ربطه بقاعدة بيانات أو خدمة backend.
+*/
+complaintForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("fullName").value.trim();
+
+  formMessage.textContent =
+    `تم تجهيز طلب ${name} بنجاح — هذه نسخة تجريبية.`;
+
+  complaintForm.reset();
+});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body></html>

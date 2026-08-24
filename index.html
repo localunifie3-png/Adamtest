@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Education Portal — Sign in</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+<div class="veil"></div>
+
+<header class="topbar">
+  <div class="mini-brand">
+    <span><img src="HG.png" style="width:80px;height:80px;" ></span>
+  </div>
+  <button class="language"><img src="images/icon/tasjile.gif" style="display:block; margin:auto;"></button>
+</header>
+
+<main class="viewport">
+  <section class="card" id="card">
+    <img class="ministry-logo" src="ministry-logo-transparent.png" alt="Education ministry logo">
+
+    <div class="step active" id="emailStep">
+      <h1>تسجيل الدخول</h1>
+      <p class="subtitle">استخدم اسمك الكامل للوصول إلى بوابة التعليم.</p>
+
+      <label for="email">الإسم الكامل</label>
+      <div class="student-input">
+        <span class="mail-icon"><img src="images/icon/tilmidename.png" alt="تلميذ" style="width:30px;height:30px;"></span>
+
+        <input
+            id="email"
+            type="text"
+            autocomplete="username"
+            placeholder="اسمك الكامل"
+        >
+        
+
+      </div>
+
+      <button class="next" id="next">التالي <b>→</b></button>
+    </div>
+
+    <div class="step" id="passwordStep">
+      <button class="back" id="back">‹ Back</button>
+      <div class="account" id="account"></div>
+
+
+      <button type="button" class="next" id="signIn">
+            Sign in <span>→</span>
+      </button>
+    </div>
+
+    <div class="step" id="registerStep">
+
+      <button class="back" id="registerBack">‹ Back</button>
+
+    </div>
+
+    <div class="status" id="status"></div>
+    <div class="loading-dots" id="loadingDots" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="progress" id="progress"></div>
+  </section>
+</main>
+
+<footer>
+  <span>نادي الصحافة المدرسي© 2026 </span>
+</footer>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+</body>
+</html>

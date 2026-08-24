@@ -1,0 +1,351 @@
+
+
+/* ------------------------------
+   Blur overlay
+------------------------------ */
+
+.blur-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+
+  background: rgba(10, 25, 38, .18);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity .32s ease,
+    visibility .32s ease;
+}
+
+body.panel-open .blur-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ------------------------------
+   Complaints panel
+------------------------------ */
+
+.complaints-panel {
+  position: fixed;
+  top: 0;
+  right: 72px;
+  width: min(430px, calc(100vw - 72px));
+  height: 100vh;
+  z-index: 400;
+
+  overflow-y: auto;
+  padding: 26px 21px 75px;
+
+  background: rgba(255,255,255,.98);
+  border-left: 1px solid var(--border);
+  box-shadow: -20px 0 60px rgba(20,45,65,.16);
+
+  transform: translateX(35px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform .38s cubic-bezier(.2,.8,.2,1),
+    opacity .28s ease,
+    visibility .38s ease;
+}
+
+body.panel-open .complaints-panel {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ------------------------------
+   Panel header
+------------------------------ */
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-label {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.panel-header h2 {
+  margin: 7px 0 3px;
+  font-size: 23px;
+}
+
+.panel-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.close-btn {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1f4f6;
+  color: #5e6a73;
+  font-size: 25px;
+  cursor: pointer;
+  transition: .22s ease;
+}
+
+.close-btn:hover {
+  background: #e7edf1;
+  transform: rotate(90deg);
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+#complaintForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#complaintForm label {
+  margin: 9px 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #46535d;
+}
+
+#complaintForm input,
+#complaintForm textarea {
+  width: 100%;
+  border: 1px solid #dfe6ea;
+  border-radius: 11px;
+  outline: none;
+  background: #f9fbfc;
+  color: var(--text);
+  padding: 11px 12px;
+  font-size: 11px;
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+#complaintForm textarea {
+  resize: vertical;
+  min-height: 92px;
+}
+
+#complaintForm input:focus,
+#complaintForm textarea:focus {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(8,127,193,.10);
+}
+
+.submit-btn {
+  margin-top: 15px;
+  min-height: 45px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: white;
+  background: linear-gradient(135deg, var(--primary), #9e712e);
+  box-shadow: 0 8px 20px rgba(8,127,193,.20);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: .22s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 25px rgba(8,127,193,.27);
+}
+
+.submit-btn b {
+  font-size: 17px;
+}
+
+.form-message {
+  min-height: 15px;
+  margin: 9px 0 0;
+  color: #20a56e;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ------------------------------
+   الخدمات الإضافية
+------------------------------ */
+
+.service-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-link {
+  min-height: 67px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 10px;
+  border-radius: 13px;
+  border: 1px solid transparent;
+
+  transition: .22s ease;
+}
+
+.service-link:hover {
+  background: #f6f9fa;
+  border-color: var(--border);
+  transform: translateX(-4px);
+}
+
+.mini-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+}
+
+.mini-icon.blue {
+  background: #ffffff;
+}
+
+.mini-icon.green {
+  background: #ffffff;
+}
+
+.service-link > span:nth-child(2) {
+  flex: 1;
+}
+
+.service-link strong {
+  display: block;
+  font-size: 11px;
+}
+
+.service-link strong {
+  color: #000000; /* غيّر هذا اللون كما تريد */
+  text-decoration: none; /* لإزالة الخط تحت النص */
+  font-weight: 600; /* لجعل النص أوضح */
+  font-family: 'Calibri', 'Scheherazade', serif; /* خط عربي جميل */
+}
+
+.service-link a:hover {
+  color: #20a56e; /* لون عند المرور بالماوس */
+}
+
+
+
+
+.service-link > b {
+  color: #d46509;
+  font-size: 21px;
+}
+
+
+
+/* ------------------------------
+   Animations
+------------------------------ */
+
+@keyframes sectionIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   الهاتف
+------------------------------ */
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 58px;
+  }
+
+  .side-icon,
+  .complaints-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profile {
+    width: 32px;
+    height: 32px;
+  }
+
+  .page-content {
+    padding: 90px 70px 30px 15px;
+  }
+
+  .welcome-card {
+    padding: 28px 20px;
+    margin: 35px auto;
+  }
+
+  .welcome-card h1 {
+    font-size: 30px;
+  }
+
+  .complaints-panel {
+    right: 58px;
+    width: calc(100vw - 58px);
+    padding: 20px 14px 72px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .complaints-panel {
+    right: 54px;
+    width: calc(100vw - 54px);
+  }
+
+  .sidebar {
+    width: 54px;
+  }
+
+  .page-content {
+    padding-right: 64px;
+  }
+
+  .complaint-section,
+  .extra-section {
+    padding: 13px;
+  }
+}

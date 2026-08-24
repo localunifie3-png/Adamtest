@@ -1,0 +1,1103 @@
+
+/*
+=========================================================
+ STYLE PREMIUM — Student Space
+ --------------------------------------------------------
+ مهم:
+ 1) ضع هذا الملف بعد ملف CSS الحالي.
+ 2) لا يحتوي أي تعديل على .portal-header.
+ 3) يحافظ على HTML وJavaScript الموجودين.
+ 4) يمكن حذفه في أي وقت والرجوع للتصميم السابق.
+=========================================================
+*/
+
+/* =========================
+   1. BASE / DESIGN SYSTEM
+========================= */
+
+:root{
+  --gold:#d99a16;
+  --gold-2:#f2b632;
+  --gold-soft:#fff7df;
+
+  --blue:#0878d1;
+  --blue-2:#2ea8f5;
+  --blue-soft:#eef7ff;
+
+  --ink:#17202a;
+  --muted:#718096;
+  --line:#e7edf2;
+  --surface:#ffffff;
+  --surface-2:#f7f9fc;
+
+  --shadow-sm:0 4px 14px rgba(20,45,70,.06);
+  --shadow-md:0 12px 30px rgba(20,45,70,.10);
+  --shadow-lg:0 22px 55px rgba(20,45,70,.14);
+
+  --radius:16px;
+  --ease:cubic-bezier(.2,.75,.2,1);
+}
+
+html,
+body{
+  margin:0;
+  min-height:100%;
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+/* =========================
+   2. PORTAL BACKGROUND
+========================= */
+
+.portal{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(8,120,209,.045), transparent 28%),
+    radial-gradient(circle at 88% 22%, rgba(217,154,22,.045), transparent 25%),
+    #fbfcfe;
+}
+
+.portal-body{
+  min-height:calc(100vh - 64px);
+  background:transparent;
+}
+
+.content{
+  width:100%;
+  max-width:1540px;
+  margin:0 auto;
+  padding:38px 48px 80px;
+}
+
+/* =========================
+   3. SIDEBAR
+   Header is intentionally
+   NOT touched.
+========================= */
+
+.sidebar{
+  position:relative;
+  flex:0 0 76px;
+  width:76px;
+  min-height:calc(100vh - 64px);
+
+  padding:12px 8px;
+
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);
+
+  border-right:1px solid var(--line);
+
+  box-shadow:4px 0 22px rgba(20,45,70,.035);
+
+  transition:
+    width .32s var(--ease),
+    flex-basis .32s var(--ease),
+    box-shadow .32s ease;
+
+  z-index:50;
+}
+
+/* Desktop expanded rail */
+.sidebar:hover{
+  width:218px;
+  flex-basis:218px;
+  box-shadow:8px 0 30px rgba(20,45,70,.08);
+}
+
+.sidebar.expanded{
+  width:218px;
+  flex-basis:218px;
+}
+
+.nav-item{
+  position:relative;
+
+  width:100%;
+  min-width:0;
+  height:56px;
+
+  display:flex;
+  align-items:center;
+
+  gap:13px;
+  padding:0 13px;
+  margin:3px 0;
+
+  border:0;
+  border-radius:13px;
+
+  background:transparent;
+  color:#52606d;
+
+  cursor:pointer;
+  text-align:right;
+
+  transition:
+    background .22s ease,
+    color .22s ease,
+    transform .22s ease;
+}
+
+.nav-item span{
+  flex:0 0 30px;
+  width:30px;
+
+  display:grid;
+  place-items:center;
+
+  font-size:20px;
+
+  transition:transform .22s ease;
+}
+
+.nav-item b{
+  min-width:0;
+
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-size:13px;
+  font-weight:650;
+
+  white-space:nowrap;
+  overflow:hidden;
+
+  opacity:0;
+  width:0;
+
+  transition:
+    opacity .2s ease,
+    width .25s var(--ease);
+}
+
+.sidebar:hover .nav-item b,
+.sidebar.expanded .nav-item b{
+  opacity:1;
+  width:auto;
+}
+
+.nav-item:hover{
+  color:var(--blue);
+  background:linear-gradient(90deg,#f6fbff,#eef7ff);
+  transform:translateX(-2px);
+}
+
+.nav-item:hover span{
+  transform:scale(1.08);
+}
+
+.nav-item.active{
+  color:var(--blue);
+  background:linear-gradient(90deg,#eef8ff,#e4f3ff);
+  box-shadow:inset 0 0 0 1px rgba(8,120,209,.07);
+}
+
+.nav-item.active:before{
+  content:"";
+
+  position:absolute;
+  right:0;
+  top:10px;
+  bottom:10px;
+
+  width:3px;
+
+  border-radius:4px 0 0 4px;
+  background:linear-gradient(180deg,var(--blue-2),var(--blue));
+}
+
+.nav-item.logout{
+  color:#b4232c;
+}
+
+.nav-item.logout:hover{
+  background:#fff2f3;
+  color:#a4262c;
+}
+
+/* =========================
+   4. TITLES
+========================= */
+
+.content h1,
+.view h1{
+  color:var(--ink);
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-weight:800;
+  letter-spacing:-.7px;
+}
+
+.content h1{
+  font-size:clamp(28px,3vw,40px);
+}
+
+.content h2,
+.view h2{
+  color:var(--ink);
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-weight:750;
+}
+
+.welcome,
+.welcome2{
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* =========================
+   5. QUICK CARDS
+========================= */
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+}
+
+.quick-card{
+  position:relative;
+
+  min-height:205px;
+
+  border:1px solid var(--line);
+  border-radius:20px;
+
+  background:rgba(255,255,255,.94);
+
+  box-shadow:var(--shadow-sm);
+
+  overflow:hidden;
+  cursor:pointer;
+
+  transition:
+    transform .3s var(--ease),
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.quick-card:hover{
+  transform:translateY(-7px);
+  border-color:#d9e6f0;
+  box-shadow:var(--shadow-lg);
+}
+
+.quick-image,
+.image-two,
+.image-three,
+.image-four{
+  height:112px;
+  background-size:cover;
+  background-position:center;
+
+  transition:transform .55s var(--ease);
+}
+
+.quick-card:hover .quick-image,
+.quick-card:hover .image-two,
+.quick-card:hover .image-three,
+.quick-card:hover .image-four{
+  transform:scale(1.045);
+}
+
+.quick-icon{
+  position:relative;
+  z-index:2;
+
+  width:42px;
+  height:42px;
+
+  margin:-20px 16px 0 0;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:13px;
+
+  background:rgba(255,255,255,.96);
+  color:var(--blue);
+
+  box-shadow:0 6px 18px rgba(20,45,70,.12);
+
+  transition:transform .25s ease;
+}
+
+.quick-card:hover .quick-icon{
+  transform:translateY(-2px) rotate(-2deg);
+}
+
+.quick-card h3{
+  margin:9px 16px 4px;
+
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-size:16px;
+  font-weight:750;
+  color:var(--ink);
+}
+
+.quick-card p{
+  margin:0 16px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+}
+
+/* =========================
+   6. LEARNING CARDS
+========================= */
+
+.learning{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+
+.learn-card,
+.info-card{
+  position:relative;
+
+  min-height:145px;
+  padding:22px;
+
+  border:1px solid var(--line);
+  border-radius:18px;
+
+  background:var(--surface);
+  box-shadow:var(--shadow-sm);
+
+  overflow:hidden;
+
+  transition:
+    transform .28s var(--ease),
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.learn-card:hover,
+.info-card:hover{
+  transform:translateY(-5px);
+  border-color:#d8e4ee;
+  box-shadow:var(--shadow-md);
+}
+
+.learn-card em{
+  color:var(--blue);
+  background:var(--blue-soft);
+  border-radius:20px;
+  padding:5px 10px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.learn-card h3,
+.info-card h3{
+  color:var(--ink);
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-size:16px;
+}
+
+.learn-card p,
+.info-card p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* =========================
+   7. GRADE CARDS
+========================= */
+
+.levels-grid{
+  width:100%;
+  max-width:940px;
+
+  display:flex;
+  flex-direction:column;
+  gap:17px;
+
+  margin:34px auto;
+}
+
+.level-card{
+  position:relative;
+
+  width:100%;
+  min-height:126px;
+
+  display:flex;
+  align-items:center;
+
+  padding:25px 30px;
+
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:20px;
+
+  overflow:hidden;
+  cursor:pointer;
+
+  color:#fff;
+
+  box-shadow:0 10px 28px rgba(20,45,70,.10);
+
+  transition:
+    transform .35s var(--ease),
+    box-shadow .35s ease;
+}
+
+.level-card:nth-child(1){
+  background:linear-gradient(135deg,#0878d1,#35a9ee);
+}
+
+.level-card:nth-child(2){
+  background:linear-gradient(135deg,#087f79,#25bea0);
+}
+
+.level-card:nth-child(3){
+  background:linear-gradient(135deg,#6331c9,#a34cf0);
+}
+
+.level-card:nth-child(4){
+  background:linear-gradient(135deg,#d97808,#ffae25);
+}
+
+.level-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 42px rgba(20,45,70,.17);
+}
+
+.level-number{
+  position:relative;
+  z-index:2;
+
+  width:64px;
+  height:64px;
+
+  flex:0 0 64px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:18px;
+
+  background:rgba(255,255,255,.16);
+  backdrop-filter:blur(9px);
+
+  font-weight:800;
+
+  box-shadow:0 7px 18px rgba(0,0,0,.10);
+}
+
+.level-card div{
+  position:relative;
+  z-index:2;
+  margin-right:20px;
+}
+
+.level-card h3{
+  margin:0 0 7px;
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+  font-size:23px;
+}
+
+.level-card p{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  line-height:1.6;
+}
+
+.level-card .arrow{
+  position:relative;
+  z-index:2;
+
+  margin-right:auto;
+
+  width:43px;
+  height:43px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.level-card:hover .arrow{
+  transform:translateX(-7px);
+  background:rgba(255,255,255,.27);
+}
+
+/* =========================
+   8. SUBJECTS
+========================= */
+
+.subjects-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  padding:10px 0 30px;
+}
+
+.subject-card{
+  position:relative;
+
+  min-height:158px;
+
+  display:flex;
+  align-items:center;
+
+  padding:27px;
+
+  border:1px solid var(--line);
+  border-radius:19px;
+
+  background:linear-gradient(135deg,#fff,#f7faff);
+
+  overflow:hidden;
+  cursor:pointer;
+
+  box-shadow:var(--shadow-sm);
+
+  transition:
+    transform .3s var(--ease),
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.subject-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(8,120,209,.25);
+  box-shadow:var(--shadow-md);
+}
+
+.subject-card:before{
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  left:-120px;
+  top:-105px;
+
+  border-radius:50%;
+
+  background:rgba(8,120,209,.07);
+
+  transition:transform .45s var(--ease);
+}
+
+.subject-card:hover:before{
+  transform:scale(1.5);
+}
+
+.subject-icon{
+  position:relative;
+  z-index:2;
+
+  width:64px;
+  height:64px;
+
+  flex:0 0 64px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:17px;
+
+  background:linear-gradient(135deg,var(--blue),var(--blue-2));
+  color:#fff;
+
+  font-size:22px;
+  font-weight:800;
+
+  box-shadow:0 9px 22px rgba(8,120,209,.23);
+
+  transition:transform .3s ease;
+}
+
+.subject-card:hover .subject-icon{
+  transform:scale(1.08) rotate(-3deg);
+}
+
+.subject-info{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+
+  margin-right:18px;
+}
+
+.subject-info strong{
+  color:var(--ink);
+  font-size:17px;
+  font-weight:750;
+}
+
+.subject-info small{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.subject-arrow{
+  position:relative;
+  z-index:2;
+
+  margin-right:auto;
+
+  width:38px;
+  height:38px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:#edf6fd;
+  color:var(--blue);
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    color .25s ease;
+}
+
+.subject-card:hover .subject-arrow{
+  transform:translateX(-5px);
+  background:var(--blue);
+  color:#fff;
+}
+
+/* =========================
+   9. LESSONS
+========================= */
+
+.lessons-list{
+  width:100%;
+  max-width:900px;
+
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
+.lesson-item{
+  min-height:64px;
+
+  display:flex;
+  align-items:center;
+
+  padding:10px 17px;
+
+  border:1px solid var(--line);
+  border-radius:13px;
+
+  background:#fff;
+
+  cursor:pointer;
+  text-align:right;
+
+  box-shadow:0 2px 8px rgba(20,45,70,.035);
+
+  transition:
+    transform .23s var(--ease),
+    border-color .23s ease,
+    box-shadow .23s ease;
+}
+
+.lesson-item:hover{
+  transform:translateX(-5px);
+  border-color:rgba(8,120,209,.28);
+  box-shadow:0 8px 22px rgba(8,120,209,.10);
+}
+
+.lesson-number{
+  width:42px;
+  color:var(--blue);
+  font-weight:800;
+}
+
+.lesson-name{
+  color:#303943;
+  font-size:14px;
+  overflow-wrap:anywhere;
+}
+
+.lesson-arrow{
+  margin-right:auto;
+  color:var(--blue);
+}
+
+/* =========================
+   10. BACK BUTTON
+========================= */
+
+.back-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  min-width:108px;
+  height:43px;
+
+  padding:0 17px;
+
+  border:1px solid #dbe5ed;
+  border-radius:12px;
+
+  background:#fff;
+  color:var(--blue);
+
+  box-shadow:var(--shadow-sm);
+
+  cursor:pointer;
+
+  transition:
+    transform .25s var(--ease),
+    background .25s ease,
+    color .25s ease,
+    box-shadow .25s ease;
+}
+
+.back-button:hover{
+  transform:translateX(-4px);
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+  box-shadow:0 10px 24px rgba(8,120,209,.20);
+}
+
+/* =========================
+   11. TABLES
+========================= */
+
+.view table{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow-sm);
+}
+
+th,
+td{
+  padding:13px 14px;
+  border-bottom:1px solid #edf1f4;
+}
+
+th{
+  background:#f6f9fc;
+  color:#263442;
+  font-weight:750;
+}
+
+/* =========================
+   12. COMPETITIONS
+========================= */
+
+.competitions-section{
+  max-width:1200px;
+  width:100%;
+  margin:0 auto;
+  padding:28px 20px 55px;
+}
+
+.competitions-header h2{
+  color:var(--ink);
+  font-family:"Cairo","Segoe UI",Arial,sans-serif;
+}
+
+.section-label{
+  color:#b47a00;
+}
+
+.competition-trophy{
+  border:1px solid #f2dfaa;
+  background:linear-gradient(135deg,#fffaf0,#fff0bd);
+  box-shadow:0 9px 24px rgba(190,145,20,.12);
+}
+
+/* =========================
+   13. LOGOUT MODAL
+========================= */
+
+.logout-overlay{
+  background:rgba(8,18,28,.40);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+
+.logout-modal{
+  border:1px solid rgba(255,255,255,.7);
+  border-radius:18px;
+  box-shadow:var(--shadow-lg);
+}
+
+#confirmLogout{
+  background:linear-gradient(135deg,var(--blue),var(--blue-2));
+  border-radius:9px;
+}
+
+/* =========================
+   14. COMPLAINTS PANEL
+   Compatible with previous
+   complaints-service code.
+========================= */
+
+.blur-overlay{
+  background:rgba(8,18,30,.20);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
+
+.complaints-panel{
+  border-left:1px solid var(--line);
+  background:rgba(255,255,255,.98);
+  box-shadow:-20px 0 55px rgba(15,35,55,.14);
+}
+
+.complaints-panel input,
+.complaints-panel textarea,
+.complaints-panel select{
+  border-radius:11px;
+}
+
+.complaints-panel button{
+  border-radius:10px;
+}
+
+/* =========================
+   15. SAFE RESPONSIVE MODE
+   The Header is NOT changed.
+========================= */
+
+@media(max-width:1000px){
+
+  .content{
+    padding:30px 28px 65px;
+  }
+
+  .quick-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .learning{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:750px){
+
+  /*
+    Header intentionally untouched.
+    Sidebar becomes a compact rail.
+  */
+
+  .sidebar{
+    width:60px;
+    flex-basis:60px;
+    padding:10px 6px;
+  }
+
+  .sidebar:hover,
+  .sidebar.expanded{
+    width:60px;
+    flex-basis:60px;
+  }
+
+  .sidebar .nav-item{
+    width:48px;
+    min-width:48px;
+    height:50px;
+    padding:0;
+    justify-content:center;
+    border-radius:12px;
+  }
+
+  .sidebar .nav-item b{
+    display:none;
+  }
+
+  .sidebar .nav-item span{
+    width:30px;
+    flex-basis:30px;
+  }
+
+  .content{
+    width:calc(100% - 60px);
+    max-width:none;
+    margin:0;
+    padding:25px 16px 60px;
+  }
+
+  .quick-grid,
+  .learning,
+  .subjects-grid,
+  .card-list{
+    grid-template-columns:1fr;
+  }
+
+  .quick-card,
+  .learn-card,
+  .info-card,
+  .subject-card{
+    width:100%;
+  }
+
+  .levels-grid{
+    margin-top:25px;
+  }
+
+  .level-card{
+    min-height:112px;
+    padding:20px;
+  }
+
+  .level-number{
+    width:55px;
+    height:55px;
+    flex-basis:55px;
+  }
+
+  .level-card h3{
+    font-size:20px;
+  }
+}
+
+@media(max-width:480px){
+
+  .sidebar{
+    width:52px;
+    flex-basis:52px;
+  }
+
+  .sidebar:hover,
+  .sidebar.expanded{
+    width:52px;
+    flex-basis:52px;
+  }
+
+  .sidebar .nav-item{
+    width:42px;
+    min-width:42px;
+    height:46px;
+  }
+
+  .content{
+    width:calc(100% - 52px);
+    padding:20px 10px 50px;
+  }
+
+  .content h1,
+  .view h1{
+    font-size:27px;
+    line-height:1.35;
+  }
+
+  .level-card{
+    padding:17px;
+    min-height:102px;
+    border-radius:16px;
+  }
+
+  .level-number{
+    width:48px;
+    height:48px;
+    flex-basis:48px;
+    border-radius:14px;
+    font-size:14px;
+  }
+
+  .level-card div{
+    margin-right:13px;
+  }
+
+  .level-card h3{
+    font-size:18px;
+  }
+
+  .level-card p{
+    font-size:11px;
+  }
+
+  .subject-card{
+    min-height:125px;
+    padding:20px;
+    border-radius:16px;
+  }
+
+  .subject-icon{
+    width:53px;
+    height:53px;
+    flex-basis:53px;
+    border-radius:14px;
+  }
+
+  .subject-info{
+    margin-right:13px;
+  }
+
+  .subject-info strong{
+    font-size:15px;
+  }
+
+  .subject-info small{
+    font-size:11px;
+  }
+
+  .quick-image,
+  .image-two,
+  .image-three,
+  .image-four{
+    height:135px;
+  }
+
+  .complaints-panel{
+    width:calc(100vw - 52px);
+    right:52px;
+  }
+}
+
+/* =========================
+   16. ACCESSIBILITY
+========================= */
+
+.nav-item:focus-visible,
+.quick-card:focus-visible,
+.subject-card:focus-visible,
+.level-card:focus-visible,
+.lesson-item:focus-visible,
+.back-button:focus-visible{
+  outline:3px solid rgba(8,120,209,.20);
+  outline-offset:3px;
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
