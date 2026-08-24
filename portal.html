@@ -19,7 +19,6 @@
   <button class="icon-btn"><img src="images/icon/hed.png" alt="تلميذ" style="width:24px;height:24px;"></button>
   <button class="icon-btn"><img src="images/icon/hed2.png" alt="تلميذ" style="width:30px;height:30px;"></button>
   <button class="icon-btn"><img src="images/icon/hed3.png" alt="تلميذ" style="width:24px;height:24px;"></button>
-<div class="profile"><span id="profileName">Student</span><span class="avatar1" id="avatar">S</span></div></div>
 </header>
 <div class="portal-body">
 <aside class="sidebar" id="sidebar">
@@ -827,13 +826,11 @@ href="style3.css"></head><body>
 const side=document.getElementById("sidebar");
 document.getElementById("menu").onclick=()=>side.classList.toggle("expanded");
 const name=localStorage.getItem("studentName")||"Student", account=localStorage.getItem("studentAccount")||"student@taalim.HG";
-document.getElementById("profileName").textContent=name;document.getElementById("avatar").textContent=name[0].toUpperCase();
 document.getElementById("fullName").textContent=name;document.getElementById("fullAccount").textContent=account;
 function openView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll("[data-view]").forEach(n=>n.classList.toggle("active",n.dataset.view===id));}
 document.querySelectorAll("[data-view]").forEach(n=>n.onclick=()=>openView(n.dataset.view));
 document.querySelectorAll("[data-open]").forEach(n=>n.onclick=()=>openView(n.dataset.open));
 
-document.getElementById("profileName").textContent = name;
 document.getElementById("fullAccount").textContent = name;
 
 
@@ -894,13 +891,6 @@ const studentAccount =
     localStorage.getItem("studentAccount") ||
     "student@taalim.HG";
 
-// عرض الحساب في الأعلى
-document.getElementById("profileName").textContent =
-    studentAccount;
-
-// وضع أول حرف في دائرة الحساب
-document.getElementById("avatar").textContent =
-    studentName.charAt(0).toUpperCase();
 
 
 /* ================================
