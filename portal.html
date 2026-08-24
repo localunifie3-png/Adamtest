@@ -15,7 +15,6 @@
 <img class="HG-logo" src="HG.png" alt="Education ministry logo">
 <img class="ministry-logo" src="ministry-logo-transparent.png" alt="Education ministry logo">
 </div>
-<input class="search" id="search" placeholder="Search in Student Space">
 <div class="header-actions" >
   <button class="icon-btn"><img src="images/icon/hed.png" alt="تلميذ" style="width:24px;height:24px;"></button>
   <button class="icon-btn"><img src="images/icon/hed2.png" alt="تلميذ" style="width:30px;height:30px;"></button>
@@ -884,7 +883,6 @@ confirmLogout.addEventListener("click", function () {
 
 });
 
-document.getElementById("search").oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll(".quick-card").forEach(c=>c.style.display=!q||c.textContent.toLowerCase().includes(q)?"":"none")};
 </script>
 
 <script>
