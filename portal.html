@@ -115,7 +115,6 @@
 
             <div>
                 <h2 id="selectedLevelTitle">Subjects</h2>
-                <p>Choose a subject to see its lessons.</p>
             </div>
         </div>
 
@@ -129,7 +128,7 @@
         <div class="section-heading">
 
             <button id="backToSubjects" class="back-button">
-                ← Subjects
+                ← الرجوع إلى المواد
             </button>
 
             <div>
@@ -162,7 +161,7 @@ href="style3.css"></head><body>
 <article class="slide"><img src="images/press/SAHAFA CLUB/N2.jpg" alt="تغطية نشاط"><div class="slide-caption"><span>02</span><div><h3>الحناء</h3><p>ذكريات خالدة لا تنسى.</p></div></div></article>
 <article class="slide"><img src="images/press/SAHAFA CLUB/N3.jpg" alt="ورشة صحفية"><div class="slide-caption"><span>03</span><div><h3>الإفطار الجماعي</h3><p>ذكريات خالدة لا تنسى.</p></div></div></article>
 <article class="slide"><img src="images/press/SAHAFA CLUB/N4.jpg" alt="اجتماع الفريق"><div class="slide-caption"><span>04</span><div><h3>الزيارة إلى البنك</h3><p>ذكريات خالدة لا تنسى.</p></div></div></article>
-<article class="slide"><img src="images/press/SAHAFA CLUB/N5.CR2" alt="..."><div class="slide-caption"><span>05</span><div><h3>بداية موسم دراسي جديد</h3><p>بالتوفيق للجميع</p></div></div></article>
+<article class="slide"><img src="images/press/SAHAFA CLUB/N5.jpeg" alt="..."><div class="slide-caption"><span>05</span><div><h3>بداية موسم دراسي جديد</h3><p>بالتوفيق للجميع</p></div></div></article>
 </div><button class="album-arrow prev" id="prevSlide">‹</button><button class="album-arrow next" id="nextSlide">›</button><div class="dots" id="dots"></div></div></section>
 <section class="section" id="activities"><div class="section-title"><div><h2 class="eyebrow">ماذا يقدم النادي؟</h2></div></div><div class="feature-grid">
 <article class="feature-card"><span>✍️</span><h3>الكتابة الصحفية</h3><p>تعلم كتابة الخبر والتقرير والحوار.</p></article>
@@ -808,17 +807,19 @@ const studentAccount =
 const curriculum = {
 
     "1ac": {
-        name: "1st Year Middle School",
+        name: "امتحانات محلية",
 
         subjects: {
             math: {
                 name: "الرياضيات",
                 icon: "∑",
                 lessons: [
-                    "adam",
-                    "Fractions",
-                    "Geometry",
-                    "Proportionality"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
+
                 ]
             },
 
@@ -826,9 +827,11 @@ const curriculum = {
                 name: "علوم الحياة والأرض",
                 icon: "🌱",
                 lessons: [
-                    "The living world",
-                    "Nutrition",
-                    "The human body"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -836,9 +839,11 @@ const curriculum = {
                 name: "الفيزياء والكيمياء",
                 icon: "⚗",
                 lessons: [
-                    "Matter",
-                    "Measurements",
-                    "Electricity"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -846,10 +851,11 @@ const curriculum = {
                 name: "اللغة العربية",
                 icon: "ع",
                 lessons: [
-                    "Reading",
-                    "Grammar",
-                    "Expression",
-                    "Literature"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -857,10 +863,11 @@ const curriculum = {
                 name: "اللغة الفرنسية",
                 icon: "FR",
                 lessons: [
-                    "Reading",
-                    "Grammar",
-                    "Vocabulary",
-                    "Expression"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -868,9 +875,11 @@ const curriculum = {
                 name: "التربية الإسلامية",
                 icon: "☪",
                 lessons: [
-                    "Vocabulary",
-                    "Grammar",
-                    "Reading"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -878,9 +887,11 @@ const curriculum = {
                 name: "الاجتماعيات",
                 icon: "🌍",
                 lessons: [
-                    "History",
-                    "Geography",
-                    "Civic Education"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
+
                 ]
             }
         }
@@ -888,18 +899,17 @@ const curriculum = {
 
 
     "2ac": {
-        name: "2nd Year Middle School",
+        name: "امتحانات جهوية",
 
         subjects: {
-
             math: {
                 name: "الرياضيات",
                 icon: "∑",
                 lessons: [
-                    "Algebra",
-                    "Geometry",
-                    "Proportionality",
-                    "Statistics"
+                    {
+                        name: "محلي1",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -907,9 +917,10 @@ const curriculum = {
                 name: "علوم الحياة والأرض",
                 icon: "🌱",
                 lessons: [
-                    "Human nutrition",
-                    "Respiration",
-                    "Earth sciences"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -917,9 +928,11 @@ const curriculum = {
                 name: "الفيزياء والكيمياء",
                 icon: "⚗",
                 lessons: [
-                    "Electricity",
-                    "Matter",
-                    "Chemical transformations"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -927,10 +940,11 @@ const curriculum = {
                 name: "اللغة العربية",
                 icon: "ع",
                 lessons: [
-                    "Grammar",
-                    "Reading",
-                    "Expression",
-                    "Literature"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -938,9 +952,11 @@ const curriculum = {
                 name: "اللغة الفرنسية",
                 icon: "FR",
                 lessons: [
-                    "Grammar",
-                    "Reading",
-                    "Communication"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -948,9 +964,11 @@ const curriculum = {
                 name: "التربية الإسلامية",
                 icon: "☪",
                 lessons: [
-                    "Grammar",
-                    "Vocabulary",
-                    "Communication"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -958,9 +976,11 @@ const curriculum = {
                 name: "الاجتماعيات",
                 icon: "🌍",
                 lessons: [
-                    "History",
-                    "Geography",
-                    "Civic Education"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             }
         }
@@ -968,18 +988,17 @@ const curriculum = {
 
 
     "3ac": {
-        name: "3rd Year Middle School",
+        name: "امتحانات جهوية",
 
         subjects: {
-
             math: {
                 name: "الرياضيات",
                 icon: "∑",
                 lessons: [
-                    "Algebra",
-                    "Functions",
-                    "Geometry",
-                    "Statistics"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -987,9 +1006,10 @@ const curriculum = {
                 name: "علوم الحياة والأرض",
                 icon: "🌱",
                 lessons: [
-                    "Genetics",
-                    "Human body",
-                    "Earth sciences"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -997,9 +1017,11 @@ const curriculum = {
                 name: "الفيزياء والكيمياء",
                 icon: "⚗",
                 lessons: [
-                    "Electric circuits",
-                    "Mechanics",
-                    "Chemical reactions"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1007,10 +1029,11 @@ const curriculum = {
                 name: "اللغة العربية",
                 icon: "ع",
                 lessons: [
-                    "Grammar",
-                    "Literature",
-                    "Expression",
-                    "Reading"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1018,9 +1041,11 @@ const curriculum = {
                 name: "اللغة الفرنسية",
                 icon: "FR",
                 lessons: [
-                    "Grammar",
-                    "Literature",
-                    "Expression"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1028,9 +1053,11 @@ const curriculum = {
                 name: "التربية الإسلامية",
                 icon: "☪",
                 lessons: [
-                    "Grammar",
-                    "Vocabulary",
-                    "Reading"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1038,28 +1065,30 @@ const curriculum = {
                 name: "الاجتماعيات",
                 icon: "🌍",
                 lessons: [
-                    "History",
-                    "Geography",
-                    "Civic Education"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             }
         }
+
     },
 
 
     "tronc": {
-        name: "Common Core",
+        name: "امتحانات وطنية",
 
         subjects: {
-
             math: {
                 name: "الرياضيات",
                 icon: "∑",
                 lessons: [
-                    "Algebra",
-                    "Functions",
-                    "Statistics",
-                    "Geometry"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -1067,9 +1096,10 @@ const curriculum = {
                 name: "علوم الحياة والأرض",
                 icon: "🌱",
                 lessons: [
-                    "Cell biology",
-                    "Genetics",
-                    "Ecology"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
                 ]
             },
 
@@ -1077,9 +1107,11 @@ const curriculum = {
                 name: "الفيزياء والكيمياء",
                 icon: "⚗",
                 lessons: [
-                    "Mechanics",
-                    "Electricity",
-                    "Chemical transformations"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1087,10 +1119,11 @@ const curriculum = {
                 name: "اللغة العربية",
                 icon: "ع",
                 lessons: [
-                    "Arabic grammar",
-                    "Literary texts",
-                    "Expression",
-                    "Rhetoric"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1098,10 +1131,11 @@ const curriculum = {
                 name: "اللغة الفرنسية",
                 icon: "FR",
                 lessons: [
-                    "Grammar",
-                    "Reading",
-                    "Literature",
-                    "Expression"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1109,10 +1143,11 @@ const curriculum = {
                 name: "التربية الإسلامية",
                 icon: "☪",
                 lessons: [
-                    "Grammar",
-                    "Vocabulary",
-                    "Reading",
-                    "Communication"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             },
 
@@ -1120,9 +1155,11 @@ const curriculum = {
                 name: "الاجتماعيات",
                 icon: "🌍",
                 lessons: [
-                    "History",
-                    "Geography",
-                    "Civic education"
+                    {
+                        name: "جهوي2022",
+                        url: "page404.html"
+                    },
+
                 ]
             }
         }
@@ -1133,6 +1170,7 @@ const curriculum = {
 /* ================================
    ELEMENTS
 ================================ */
+
 
 const levels = document.getElementById("levels");
 const subjectsSection =
@@ -1160,6 +1198,8 @@ const selectedSubjectDescription =
 
 let currentLevel = null;
 let currentSubject = null;
+
+
 
 
 /* ================================
@@ -1248,7 +1288,7 @@ function displayLessons(subject) {
         subject.name;
 
     selectedSubjectDescription.textContent =
-        "Lessons for your selected level";
+        "الامتحانات";
 
     subjectsSection.classList.add("hidden");
 
@@ -1265,17 +1305,18 @@ function displayLessons(subject) {
             item.className = "lesson-item";
 
             item.innerHTML = `
-                <span class="lesson-number">
-                    ${String(index + 1).padStart(2, "0")}
-                </span>
+                <a 
+                    class="local-box"
+                    href="${lesson.url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                <span>${String(index + 1).padStart(2, "0")}</span>
 
-                <span class="lesson-name">
-                    ${lesson}
-                </span>
+                <strong>${lesson.name}</strong>
 
-                <span class="lesson-arrow">
-                    →
-                </span>
+                <span class="lesson-arrow">←</span>
+                </a>
             `;
 
             lessons.appendChild(item);
@@ -1283,6 +1324,9 @@ function displayLessons(subject) {
         }
     );
 }
+
+
+
 
 
 /* ================================

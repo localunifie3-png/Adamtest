@@ -246,6 +246,7 @@
 
 .back-button {
     position: relative;
+    font-family: 'calibri', 'Scheherazade', serif; /* خط عربي جميل */
 
     display: inline-flex;
     align-items: center;
@@ -703,6 +704,7 @@
 .subject-info {
     position: relative;
     z-index: 2;
+    font-family: 'calibri', 'Scheherazade', serif; /* خط عربي جميل */
 
     display: flex;
     flex-direction: column;
@@ -720,8 +722,8 @@
 }
 
 .subject-info small {
-    color: #7b8794;
-
+    color: #ffffff;
+    font-family: 'calibri', 'Scheherazade', serif; /* خط عربي جميل */
     font-size: 12px;
 }
 
@@ -2100,4 +2102,23 @@ img {
   color: #5a5654;
   font-size: 1rem;
 }
+
+
+
+.local-box {
+  font-family: 'calibri', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #169bcf; /* بنفسجي أنيق */
+  letter-spacing: 0.5px;
+  text-align: right;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+}
+.local-box:hover {
+  color: #62e9e9; /* بنفسجي أفتح عند المرور */
+}
+
+
 
